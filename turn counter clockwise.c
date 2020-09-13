@@ -1,0 +1,38 @@
+while (SensorValue[dgtl3] > -x)// i dont believe that 250 is a 90 degree turn for counter clockwise... will have to do test when i get to school
+{ if (SensorValue[dgtl1] < SensorValue[dgtl3])
+{
+motor(port1)=  117;
+motor(port3)=  117;
+motor(port4)=  117;
+motor(port10)=  127;
+motor(port5)=  127;
+motor(port6)=  127;
+}
+ if(SensorValue[dgtl1] > SensorValue[dgtl3])
+ {
+motor(port1)=  127;
+motor(port3)=  127;
+motor(port4)=  127;
+motor(port10)=  117;
+motor(port5)=  117;
+motor(port6)=  117;
+}
+if(SensorValue[dgtl1] == SensorValue[dgtl3])
+ {
+motor(port1)=  127;
+motor(port3)= 127;
+motor(port4)=  127;
+motor(port10)= 127;
+motor(port5)=  127;
+motor(port6)=  127;
+}
+}
+
+
+motor(port1)= 0;
+motor(port3)=  0;
+motor(port4)=  0;
+motor(port10)=  0;
+motor(port5)=  0;
+motor(port6)=  0;
+wait1Msec(500);
